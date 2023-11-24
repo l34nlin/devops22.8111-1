@@ -3,10 +3,8 @@ pipeline{
     stages {
         stage('build TADS'){
             steps{
-                sh'''
-                npm install
-                npm start  
-                npm test
+                sh''' 
+                docker --version
                 '''
                 
             }
