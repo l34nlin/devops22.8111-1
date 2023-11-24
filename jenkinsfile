@@ -1,0 +1,15 @@
+pipeline{
+    agent any
+    stages {
+        stage('build TADS'){
+            steps{
+                sh'''
+                npm install
+                npm start  
+                npm test
+                '''
+                
+            }
+        }
+    }
+}
