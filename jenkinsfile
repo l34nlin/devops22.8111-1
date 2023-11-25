@@ -4,7 +4,7 @@ pipeline{
         stage('build TADS'){
             steps{
                 sh''' 
-                docker-compose bild
+                docker-compose build
                 docker-compose up
                 '''
                 
