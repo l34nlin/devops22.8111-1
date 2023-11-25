@@ -6,6 +6,7 @@ pipeline{
                 sh''' 
                 docker-compose build
                 docker-compose up
+                npm test
                 '''
                 
             }
