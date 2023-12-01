@@ -1,15 +1,16 @@
 pipeline{
     agent any
-    tools {nodejs 'node'}
+    tools {nodejs 'slameubom'}
+
     stages {
         stage('test'){
             steps{
                 sh'npm install'
                 sh'npm test'
-                
+
             }
         }
-        stage('bild'){
+        stage('build'){
             steps{
                 sh'docker-compose build'
         
