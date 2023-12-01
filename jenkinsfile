@@ -1,14 +1,18 @@
 pipeline{
     agent any
+    tools {nodejs'node'}
     stages {
-        stage('build TADS'){
+        stage('test'){
             steps{
-                sh''' 
-                docker-compose build
-                docker-compose up
-                npm test
-                '''
+                sh'npm install'
+                sh'npm test'
                 
+            }
+        }
+        stage('bild'){
+            steps{
+                sh'docker-compose build'
+                sh'docker-compose up'
             }
         }
     }
