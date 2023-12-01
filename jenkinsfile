@@ -12,6 +12,12 @@ pipeline{
         stage('bild'){
             steps{
                 sh'docker-compose build'
+        
+            }
+            
+        }
+        stage('up'){
+            steps{
                 sh'docker-compose up'
             }
         }
